@@ -1,0 +1,108 @@
+#include <stdio.h>
+
+//prototypes
+//char dec_func(char decision);
+
+
+//var
+char method;
+char decision;
+
+
+int main(int argc, char **argv)
+{
+
+//display preset values
+	printf("\n\n\t\t\t\tTHE TEMP GUAGE PRESET VALUES\n");
+	printf("\n");
+	printf("\n\tTEMP > 25 DEGREES : HIGH TEMP_ ");
+	printf("\n\tTEMP = 25 DEGREES : NORM TEMP_ ");
+	printf("\n\tTEMP < 25 DEGREES : LOW TEMP_ ");
+	printf("\n\n\n\n");
+
+//current temp display
+	printf("\n\n\n\n");
+	
+//choose which method to use for the guage
+	printf("PRESS [p | P] : To increase TEMP by PRESET VALUES\n");
+	printf("PRESS [d | D] : To increase TEMP by DEGREES\n\n");
+	printf("Enter value: ");
+//input for method
+	scanf(" %c", &method);
+	switch(method){
+	case 'p':
+	case 'P':
+	printf("\n\nChange TEMP using Preset values");
+	printf("\n\n");
+	printf("PRESS [y | Y] to confirm\t\t\t");
+	printf("PRESS [n | N] to cancel\n");
+
+//out for decision
+	char decision;
+	printf("[ y | n ] : ");
+
+//input for decision
+	scanf(" %c", &decision);
+	switch(decision){
+	case 'n':
+	case 'N':
+	printf("Cancelled Operation");
+//display preset values as a loop
+//	printf("Do you want to quit");
+	break;
+	case 'y':
+	case 'Y':
+	printf("Now using PRESET VALUES to change TEMP");
+	//call degrees function
+	break;
+	default:
+	printf("\n\n");
+	printf("Invalid decision input");
+	break;
+	case 'd':
+	case 'D':
+	printf("\n\nChange TEMP using DEGREES");
+	printf("\n\n");
+	printf("PRESS [y | Y] to confirm\t\t");
+	printf("PRESS [n | N] to cancel\n");
+
+//out for decision
+	printf("[ y | n ] : ");
+
+//input for decision
+	scanf(" %c", &decision);
+	switch(decision){
+	case 'n':
+	case 'N':
+	printf("Cancelled Operation");
+//display preset values as a loop
+	break;
+	case 'y':
+	case 'Y':
+	printf("Now using DEGREES to change TEMP");
+	//call degrees function
+	break;
+	default:
+	printf("\n\n");
+	printf("Invalid decision input");
+	break;
+
+	}
+
+
+	
+	return 0;
+}
+}
+
+
+//decisoin function
+
+/*char dec_func(char decision){
+
+	return decision;
+	}
+*/
+
+
+
